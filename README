@@ -1,0 +1,17 @@
+Cookbook code for using ctypes/numpy/eigen
+
+Uses a couple of tricks:
+
+- write function in cpp that accept pointers to standard types, like float*, double*, ...
+- in cpp, use the Map<VectorXf> trick (pay attention to the type, float/double/int/...)
+- in ctypes, declare array argument as np.ctypeslib.ndpointer(dtype = np.float32)
+
+that's it!
+
+Data should also be aligned in numpy, maybe it is possible to improve that, not yet checked.
+
+references
+----------
+
+- http://www.scipy.org/Cookbook/Ctypes
+
